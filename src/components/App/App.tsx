@@ -6,6 +6,7 @@ import Recruiter from 'components/Recruiter';
 import Filter from 'components/Filter';
 import Products from 'components/Products';
 import Cart from 'components/Cart';
+import logo from 'commons/logo.png';
 
 import { useProducts } from 'contexts/products-context';
 
@@ -21,12 +22,14 @@ function App() {
   return (
     <S.Container>
       {isFetching && <Loader />}
-      <GithubCorner />
-      <Recruiter />
+      <img
+        src={logo}
+        alt="sakhi fashion logo"
+        style={{ height: '200px', borderRadius: '10px', paddingLeft: '80px' }}
+      />
       <S.TwoColumnGrid>
         <S.Side>
           <Filter />
-          <GithubStarButton />
         </S.Side>
         <S.Main>
           <S.MainHeader>
